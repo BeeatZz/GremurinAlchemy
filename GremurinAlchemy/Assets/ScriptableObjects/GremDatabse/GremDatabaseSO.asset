@@ -14,30 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GremDatabaseSO
   grems:
   - id: Basic_Grem
+    isItem: 0
     sprite: {fileID: 4608961988614087275, guid: eda2dbca8c1983d4b8012a4c33fcb27c, type: 3}
     tint: {r: 1, g: 1, b: 1, a: 1}
     behaviors:
     - behaviorName: GremWander
       moveSpeed: 2
       wanderRadius: 5
-      minMoveTime: 2
-      minPauseTime: 1.5
-      maxPauseTime: 3
-      padding: 1
-  - id: Basic_Grem2
-    sprite: {fileID: -2936553415076712667, guid: 69d2f475006ed8349b01fd0307df71ce, type: 3}
-    tint: {r: 1, g: 1, b: 1, a: 1}
-    behaviors:
-    - behaviorName: GremWander
-      moveSpeed: 5
-      wanderRadius: 10
-      minMoveTime: 2
-      minPauseTime: 1.5
-      maxPauseTime: 3
-      padding: 1
-    - behaviorName: fire
-      moveSpeed: 5
-      wanderRadius: 10
       minMoveTime: 2
       minPauseTime: 1.5
       maxPauseTime: 3

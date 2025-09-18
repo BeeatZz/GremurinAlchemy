@@ -21,13 +21,14 @@ public class BehaviorConfig
 [System.Serializable]
 public class GremData
 {
-    public string id;             
+    public string id;
+    public bool isItem = false;
     public Sprite sprite;         
     public Color tint = Color.white;
-    public BehaviorConfig[] behaviors;  
+    public BehaviorConfig[] behaviors;
 }
 
-[CreateAssetMenu(fileName = "GremDatabaseSO", menuName = "Grems/All Grems Database")]
+[CreateAssetMenu(fileName = "GremDatabaseSO", menuName = "Grems/Grem Database")]
 public class GremDatabaseSO : ScriptableObject
 {
     public List<GremData> grems;
@@ -35,5 +36,17 @@ public class GremDatabaseSO : ScriptableObject
     public GremData GetGremById(string id)
     {
         return grems.Find(g => g.id == id);
+    }
+
+    public bool IsItem(string id)
+    {
+        GremData data = GetGremById(id);
+        return data != null && data.isItem;
+    }
+
+    public bool IsGrem(string id)
+    {
+        GremData data = GetGremById(id);
+        return data != null && !data.isItem;
     }
 }
