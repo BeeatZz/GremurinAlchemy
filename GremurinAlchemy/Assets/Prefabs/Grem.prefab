@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 470425229106731943}
   - component: {fileID: 2655100340062298692}
   - component: {fileID: 2601704683944169468}
+  - component: {fileID: -8593055760414322230}
+  - component: {fileID: 780069387259777116}
   m_Layer: 0
   m_Name: Grem
   m_TagString: Untagged
@@ -100,7 +102,7 @@ Animator:
   m_GameObject: {fileID: 7906177897288275321}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6be8e9b7d18e0044da9745e056af0989, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -143,3 +145,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gremID: 
   database: {fileID: 0}
+--- !u!61 &-8593055760414322230
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7906177897288275321}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.05595863, y: -0.376787}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.145, y: 1.56}
+    newSize: {x: 4.29, y: 3.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2.0330827, y: 0.8064259}
+  m_EdgeRadius: 0
+--- !u!114 &780069387259777116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7906177897288275321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ecad0a2c6c00344a75d71b08271005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragScaleMultiplier: 1.5
+  dragScaleSpeed: 6
+  dragSmoothTime: 0.1
+  clickThreshold: 0.1

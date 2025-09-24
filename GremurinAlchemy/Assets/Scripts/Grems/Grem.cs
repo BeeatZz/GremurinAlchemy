@@ -33,7 +33,7 @@ public class Grem : MonoBehaviour
 
         if (spriteRenderer != null)
         {
-            spriteRenderer.sprite = data.sprite;
+            spriteRenderer.sprite = data.defaultSprite;
             spriteRenderer.color = data.tint;
         }
 
@@ -41,7 +41,7 @@ public class Grem : MonoBehaviour
         {
             if (b.behaviorName == "GremWander")
             {
-                wanderBehavior.Initialize(b);
+                wanderBehavior.Initialize(b, data);
             }
             else
             {

@@ -15,7 +15,7 @@ MonoBehaviour:
   grems:
   - id: Basic_Grem
     isItem: 0
-    sprite: {fileID: 4608961988614087275, guid: eda2dbca8c1983d4b8012a4c33fcb27c, type: 3}
+    defaultSprite: {fileID: 4608961988614087275, guid: eda2dbca8c1983d4b8012a4c33fcb27c, type: 3}
     tint: {r: 1, g: 1, b: 1, a: 1}
     behaviors:
     - behaviorName: GremWander
@@ -25,3 +25,7 @@ MonoBehaviour:
       minPauseTime: 1.5
       maxPauseTime: 3
       padding: 1
+    idleAnimation: {fileID: 7400000, guid: 72497e329698cd84c81f21c0cb505848, type: 2}
+    walkAnimation: {fileID: 7400000, guid: 82419a7f0d890e04585dd68d4ce4238b, type: 2}
+    clickAnimation: {fileID: 0}
+    clickSound: {fileID: 0}

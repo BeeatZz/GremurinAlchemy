@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class GremWander : MonoBehaviour
 {
@@ -14,20 +15,31 @@ public class GremWander : MonoBehaviour
     private float pauseTimer = 0f;
     private float currentPauseDuration;
 
+    private bool isClicked = false;
+    private bool isDragging = false; // NEW: track dragging
+
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+    private GremData gremData;
 
     private Vector2 minBounds;
     private Vector2 maxBounds;
-
 
     private void Start()
     {
         PickNewTarget();
     }
+
     private void Update()
     {
-        if (targetPosition == Vector3.zero) return; 
+        if (targetPosition == Vector3.zero) return;
+
+        // Stop movement if clicked OR dragged
+        if (isClicked || isDragging)
+        {
+            SetIdleAnimation();
+            return;
+        }
 
         if (isPaused)
         {
@@ -85,7 +97,6 @@ public class GremWander : MonoBehaviour
         targetPosition = newTarget;
     }
 
-
     private void StartPause()
     {
         isPaused = true;
@@ -106,8 +117,13 @@ public class GremWander : MonoBehaviour
             animator.SetBool("IsWalking", true);
     }
 
-    public void Initialize(BehaviorConfig config)
+    /// <summary>
+    /// Initialize the Grem with behavior config and its database data
+    /// </summary>
+    public void Initialize(BehaviorConfig config, GremData data)
     {
+        gremData = data;
+
         moveSpeed = config.moveSpeed;
         wanderRadius = config.wanderRadius;
         minPauseTime = config.minPauseTime;
@@ -119,6 +135,24 @@ public class GremWander : MonoBehaviour
         if (animator == null)
             animator = GetComponent<Animator>();
 
+        if (spriteRenderer != null && gremData.defaultSprite != null)
+            spriteRenderer.sprite = gremData.defaultSprite;
+
+        spriteRenderer.color = gremData.tint;
+
+        if (animator != null && gremData != null)
+        {
+            var overrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
+
+            if (gremData.idleAnimation != null)
+                overrideController["idleTest"] = gremData.idleAnimation;
+            if (gremData.walkAnimation != null)
+                overrideController["runTest"] = gremData.walkAnimation;
+
+            animator.runtimeAnimatorController = overrideController;
+        }
+
+        // Calculate screen bounds
         Camera cam = Camera.main;
         if (cam == null) return;
 
@@ -136,5 +170,36 @@ public class GremWander : MonoBehaviour
                                 topRight.y - padding - spriteSize.y / 2f);
 
         PickNewTarget();
+    }
+
+    private void OnMouseDown()
+    {
+        if (animator != null && gremData != null && gremData.clickAnimation != null)
+        {
+            animator.Play(gremData.clickAnimation.name);
+            isClicked = true;
+            SetIdleAnimation();
+
+            StartCoroutine(ResumeAfterClick(gremData.clickAnimation.length));
+        }
+
+        if (gremData != null && gremData.clickSound != null)
+        {
+            AudioSource.PlayClipAtPoint(gremData.clickSound, transform.position);
+        }
+    }
+
+    private IEnumerator ResumeAfterClick(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        isClicked = false;
+    }
+
+    /// <summary>
+    /// Called by GremDrag to pause wandering while dragging
+    /// </summary>
+    public void SetDragging(bool dragging)
+    {
+        isDragging = dragging;
     }
 }
