@@ -13,7 +13,435 @@ MonoBehaviour:
   m_Name: GremCombinationsSO
   m_EditorClassIdentifier: 
   combinations:
-  - resultGremID: 
+  - resultGremID: Water_Grem
     inputs:
-    - id: 
+    - id: Ice_Grem
+      isItem: 0
+    - id: Fire_Grem
+      isItem: 0
+  - resultGremID: Lava_Grem
+    inputs:
+    - id: Fire_Grem
+      isItem: 0
+    - id: Earth_Grem
+      isItem: 0
+  - resultGremID: Mud_Grem
+    inputs:
+    - id: Water_Grem
+      isItem: 0
+    - id: Earth_Grem
+      isItem: 0
+  - resultGremID: Steam_Grem
+    inputs:
+    - id: Water_Grem
+      isItem: 0
+    - id: Fire_Grem
+      isItem: 0
+  - resultGremID: Brick_Grem
+    inputs:
+    - id: Mud_Grem
+      isItem: 0
+    - id: Fire_Grem
+      isItem: 0
+  - resultGremID: Brick_Grem
+    inputs:
+    - id: Clay_Grem
+      isItem: 0
+    - id: Fire_Grem
+      isItem: 0
+  - resultGremID: Cloud_Grem
+    inputs:
+    - id: Steam_Grem
+      isItem: 0
+    - id: Air_Grem
+      isItem: 0
+  - resultGremID: Obsidian_Grem
+    inputs:
+    - id: Fire_Grem
+      isItem: 0
+    - id: Water_Grem
+      isItem: 0
+  - resultGremID: Stone_Grem
+    inputs:
+    - id: Lava_Grem
+      isItem: 0
+    - id: Air_Grem
+      isItem: 0
+  - resultGremID: Volcano_Grem
+    inputs:
+    - id: Lava_Grem
+      isItem: 0
+    - id: Earth_Grem
+      isItem: 0
+  - resultGremID: Metal_Grem
+    inputs:
+    - id: Fire_Grem
+      isItem: 0
+    - id: Stone_Grem
+      isItem: 0
+  - resultGremID: Sand_Grem
+    inputs:
+    - id: Air_Grem
+      isItem: 0
+    - id: Stone_Grem
+      isItem: 0
+  - resultGremID: Storm_Grem
+    inputs:
+    - id: Cloud_Grem
+      isItem: 0
+    - id: Cloud_Grem
+      isItem: 0
+  - resultGremID: Wall_Grem
+    inputs:
+    - id: Brick_Grem
+      isItem: 0
+    - id: Brick_Grem
+      isItem: 0
+  - resultGremID: Sharp_Grem
+    inputs:
+    - id: Metal_Grem
+      isItem: 0
+    - id: Stone_Grem
+      isItem: 0
+  - resultGremID: Cactus_Grem
+    inputs:
+    - id: Sand_Grem
+      isItem: 0
+    - id: Plant_Grem
+      isItem: 0
+  - resultGremID: Gunpowder_Grem
+    inputs:
+    - id: Dust
+      isItem: 1
+    - id: Fire_Grem
+      isItem: 0
+  - resultGremID: Clay_Grem
+    inputs:
+    - id: Sand_Grem
+      isItem: 0
+    - id: Mud_Grem
+      isItem: 0
+  - resultGremID: Diamond_Grem
+    inputs:
+    - id: Coal_Grem
+      isItem: 0
+    - id: Time_Grem
+      isItem: 0
+  - resultGremID: Glass_Grem
+    inputs:
+    - id: Fire_Grem
+      isItem: 0
+    - id: Sand_Grem
+      isItem: 0
+  - resultGremID: Moon_Grem WIP
+    inputs:
+    - id: Wall_Grem
+      isItem: 0
+    - id: Wall_Grem
+      isItem: 0
+  - resultGremID: Rusty_Grem
+    inputs:
+    - id: Metal_Grem
+      isItem: 0
+    - id: Air_Grem
+      isItem: 0
+  - resultGremID: Rusty_Grem
+    inputs:
+    - id: Steel_Grem
+      isItem: 0
+    - id: Air_Grem
+      isItem: 0
+  - resultGremID: Sandstone_Grem
+    inputs:
+    - id: Stone_Grem
+      isItem: 0
+    - id: Sand_Grem
+      isItem: 0
+  - resultGremID: Steel_Grem
+    inputs:
+    - id: Metal_Grem
+      isItem: 0
+    - id: Coal_Grem
+      isItem: 0
+  - resultGremID: Bird_Grem
+    inputs:
+    - id: Basic_Grem
+      isItem: 0
+    - id: Air_Grem
+      isItem: 0
+  - resultGremID: Glasses_Grem
+    inputs:
+    - id: Glass_Grem
+      isItem: 0
+    - id: Basic_Grem
+      isItem: 0
+  - resultGremID: Gold_Grem
+    inputs:
+    - id: Sand_Grem
+      isItem: 0
+    - id: Metal_Grem
+      isItem: 0
+  - resultGremID: Gold_Grem
+    inputs:
+    - id: Sand_Grem
+      isItem: 0
+    - id: Steel_Grem
+      isItem: 0
+  - resultGremID: Pottery_Grem
+    inputs:
+    - id: Fire_Grem
+      isItem: 0
+    - id: Clay_Grem
+      isItem: 0
+  - resultGremID: Rain_Grem
+    inputs:
+    - id: Cloud_Grem
+      isItem: 0
+    - id: Water_Grem
+      isItem: 0
+  - resultGremID: Robot_Grem
+    inputs:
+    - id: Metal_Grem
+      isItem: 0
+    - id: Basic_Grem
+      isItem: 0
+  - resultGremID: Hourglass
+    inputs:
+    - id: Sand_Grem
+      isItem: 0
+    - id: Glass_Grem
+      isItem: 0
+  - resultGremID: Plane_Grem
+    inputs:
+    - id: Metal_Grem
+      isItem: 0
+    - id: Flying_Grem
+      isItem: 0
+  - resultGremID: Spaceship_Grem
+    inputs:
+    - id: Alien_Grem
+      isItem: 0
+    - id: Plane_Grem
+      isItem: 0
+  - resultGremID: Planet_Grem
+    inputs:
+    - id: Astronaut_Grem
+      isItem: 0
+    - id: Earth_Grem
+      isItem: 0
+  - resultGremID: Planet_Grem
+    inputs:
+    - id: Alien_Grem
+      isItem: 0
+    - id: Earth_Grem
+      isItem: 0
+  - resultGremID: Moon_Grem
+    inputs:
+    - id: Planet_Grem
+      isItem: 0
+    - id: Cheese_Grem
+      isItem: 0
+  - resultGremID: Rich_Grem
+    inputs:
+    - id: Basic_Grem
+      isItem: 0
+    - id: Gold_Grem
+      isItem: 0
+  - resultGremID: Gun
+    inputs:
+    - id: Gunpowder_Grem
+      isItem: 0
+    - id: Metal_Grem
+      isItem: 0
+  - resultGremID: Criminal_Grem
+    inputs:
+    - id: Basic_Grem
+      isItem: 0
+    - id: Gun
+      isItem: 0
+  - resultGremID: Duck_Grem
+    inputs:
+    - id: Bird_Grem
+      isItem: 0
+    - id: Water_Grem
+      isItem: 0
+  - resultGremID: Firefighter_Grem
+    inputs:
+    - id: Fire_Grem
+      isItem: 0
+    - id: Basic_Grem
+      isItem: 0
+  - resultGremID: Ostrich_Grem
+    inputs:
+    - id: Sand_Grem
+      isItem: 0
+    - id: Bird_Grem
+      isItem: 0
+  - resultGremID: Phoenix_Grem
+    inputs:
+    - id: Fire_Grem
+      isItem: 0
+    - id: Bird_Grem
+      isItem: 0
+  - resultGremID: Owl_Grem
+    inputs:
+    - id: Moon_Grem
+      isItem: 0
+    - id: Bird_Grem
+      isItem: 0
+  - resultGremID: Seagull_Grem
+    inputs:
+    - id: Water_Grem
+      isItem: 0
+    - id: Bird_Grem
+      isItem: 0
+  - resultGremID: Wizard_Grem
+    inputs:
+    - id: Basic_Grem
+      isItem: 0
+    - id: Unicorn_Grem
+      isItem: 0
+  - resultGremID: Swamp_Grem
+    inputs:
+    - id: Mud_Grem
+      isItem: 0
+    - id: Mud_Grem
+      isItem: 0
+  - resultGremID: Swamp_Grem
+    inputs:
+    - id: Mud_Grem
+      isItem: 0
+    - id: Plant_Grem
+      isItem: 0
+  - resultGremID: Lizard_Grem
+    inputs:
+    - id: Swamp_Grem
+      isItem: 0
+    - id: Basic_Grem
+      isItem: 0
+  - resultGremID: Dragon_Grem
+    inputs:
+    - id: Lizard_Grem
+      isItem: 0
+    - id: Fire_Grem
+      isItem: 0
+  - resultGremID: Dinosaur_Grem
+    inputs:
+    - id: Lizard_Grem
+      isItem: 0
+    - id: Time_Grem
+      isItem: 0
+  - resultGremID: Cyborg_Grem
+    inputs:
+    - id: Robot_Grem
+      isItem: 0
+    - id: Basic_Grem
+      isItem: 0
+  - resultGremID: Fish_Grem
+    inputs:
+    - id: Water_Grem
+      isItem: 0
+    - id: Basic_Grem
+      isItem: 0
+  - resultGremID: Pegasus_Grem
+    inputs:
+    - id: Horse_Grem
+      isItem: 0
+    - id: Bird_Grem
+      isItem: 0
+  - resultGremID: Skeleton_Grem
+    inputs:
+    - id: Bone
+      isItem: 1
+    - id: Basic_Grem
+      isItem: 0
+  - resultGremID: Vampire_Grem
+    inputs:
+    - id: Bat_Grem
+      isItem: 0
+    - id: Basic_Grem
+      isItem: 0
+  - resultGremID: Vampire_Grem
+    inputs:
+    - id: Vampire_Grem
+      isItem: 0
+    - id: Basic_Grem
+      isItem: 0
+  - resultGremID: Bat_Grem
+    inputs:
+    - id: Moon_Grem
+      isItem: 0
+    - id: Bird_Grem
+      isItem: 0
+  - resultGremID: Zombie_Grem
+    inputs:
+    - id: Necromancer_Grem
+      isItem: 0
+    - id: Corpse_Grem
+      isItem: 0
+  - resultGremID: Bone
+    inputs:
+    - id: Time_Grem
+      isItem: 0
+    - id: Corpse_Grem
+      isItem: 0
+  - resultGremID: Tree_Grem
+    inputs:
+    - id: Time_Grem
+      isItem: 0
+    - id: Plant_Grem
+      isItem: 0
+  - resultGremID: Wood_Grem
+    inputs:
+    - id: Sharp_Grem
+      isItem: 0
+    - id: Tree_Grem
+      isItem: 0
+  - resultGremID: Angel_Grem
+    inputs:
+    - id: Corpse_Grem
+      isItem: 0
+    - id: Bird_Grem
+      isItem: 0
+  - resultGremID: Deity_Grem
+    inputs:
+    - id: Angel_Grem
+      isItem: 0
+    - id: Basic_Grem
+      isItem: 0
+  - resultGremID: Farmer_Grem
+    inputs:
+    - id: Plant_Grem
+      isItem: 0
+    - id: Basic_Grem
+      isItem: 0
+  - resultGremID: Cow_Grem
+    inputs:
+    - id: Farmer_Grem
+      isItem: 0
+    - id: Basic_Grem
+      isItem: 0
+  - resultGremID: Flute_Grem
+    inputs:
+    - id: Air_Grem
+      isItem: 0
+    - id: Wood_Grem
+      isItem: 0
+  - resultGremID: Musician_Grem
+    inputs:
+    - id: Flute_Grem
+      isItem: 0
+    - id: Basic_Grem
+      isItem: 0
+  - resultGremID: Hay_Grem
+    inputs:
+    - id: Farmer_Grem
+      isItem: 0
+    - id: Grass_Grem
+      isItem: 0
+  - resultGremID: Grass_Grem
+    inputs:
+    - id: Plant_Grem
+      isItem: 0
+    - id: Earth_Grem
       isItem: 0
