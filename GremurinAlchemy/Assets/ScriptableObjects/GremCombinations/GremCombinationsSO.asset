@@ -133,12 +133,6 @@ MonoBehaviour:
       isItem: 0
     - id: Sand_Grem
       isItem: 0
-  - resultGremID: Moon_Grem WIP
-    inputs:
-    - id: Wall_Grem
-      isItem: 0
-    - id: Wall_Grem
-      isItem: 0
   - resultGremID: Rusty_Grem
     inputs:
     - id: Metal_Grem
@@ -444,4 +438,52 @@ MonoBehaviour:
     - id: Plant_Grem
       isItem: 0
     - id: Earth_Grem
+      isItem: 0
+  - resultGremID: Nephilim_Grem
+    inputs:
+    - id: Angel_Grem
+      isItem: 0
+    - id: Demon_Grem
+      isItem: 0
+  - resultGremID: Demon_Grem
+    inputs:
+    - id: Angel_Grem
+      isItem: 0
+    - id: Fire_Grem
+      isItem: 0
+  - resultGremID: Demon_Grem
+    inputs:
+    - id: Corpse_Grem
+      isItem: 0
+    - id: Fire_Grem
+      isItem: 0
+  - resultGremID: Dryad_Grem
+    inputs:
+    - id: Tree_Grem
+      isItem: 0
+    - id: Basic_Grem
+      isItem: 0
+  - resultGremID: Deer_Grem
+    inputs:
+    - id: Tree_Grem
+      isItem: 0
+    - id: Horse_Grem
+      isItem: 0
+  - resultGremID: Kirin_Grem
+    inputs:
+    - id: Deer_Grem
+      isItem: 0
+    - id: Dryad_Grem
+      isItem: 0
+  - resultGremID: Sana_Grem
+    inputs:
+    - id: Planet_Grem
+      isItem: 0
+    - id: Planet_Grem
+      isItem: 0
+  - resultGremID: Police_Grem
+    inputs:
+    - id: Duck_Grem
+      isItem: 0
+    - id: Gun_Grem
       isItem: 0
