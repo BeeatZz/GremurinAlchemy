@@ -20,11 +20,11 @@ MonoBehaviour:
     behaviors:
     - behaviorName: GremWander
       moveSpeed: 2
-      wanderRadius: 5
-      minMoveTime: 2
-      minPauseTime: 1.5
+      wanderRadius: 2
+      minMoveTime: 4
+      minPauseTime: 1
       maxPauseTime: 3
-      padding: 1
+      padding: 0.3
     idleAnimation: {fileID: 7400000, guid: 72497e329698cd84c81f21c0cb505848, type: 2}
     walkAnimation: {fileID: 7400000, guid: 82419a7f0d890e04585dd68d4ce4238b, type: 2}
     clickAnimation: {fileID: 0}

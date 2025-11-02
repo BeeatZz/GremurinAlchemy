@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "GremCombinationsSO", menuName = "Grems/Grem Combinations")]
+[System.Serializable]
 public class GremCombinationsSO : ScriptableObject
 {
     public List<GremCombination> combinations;

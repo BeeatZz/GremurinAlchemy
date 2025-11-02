@@ -10,6 +10,7 @@ public class Grem : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     private GremWander wanderBehavior;
+    public bool isMenuGrem = false;
 
     public void Initialize(string id)
     {

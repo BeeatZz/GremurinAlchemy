@@ -16,7 +16,7 @@ public class GremWander : MonoBehaviour
     private float currentPauseDuration;
 
     private bool isClicked = false;
-    private bool isDragging = false; // NEW: track dragging
+    private bool isDragging = false; 
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -34,7 +34,6 @@ public class GremWander : MonoBehaviour
     {
         if (targetPosition == Vector3.zero) return;
 
-        // Stop movement if clicked OR dragged
         if (isClicked || isDragging)
         {
             SetIdleAnimation();
@@ -117,9 +116,7 @@ public class GremWander : MonoBehaviour
             animator.SetBool("IsWalking", true);
     }
 
-    /// <summary>
-    /// Initialize the Grem with behavior config and its database data
-    /// </summary>
+  
     public void Initialize(BehaviorConfig config, GremData data)
     {
         gremData = data;
@@ -152,7 +149,6 @@ public class GremWander : MonoBehaviour
             animator.runtimeAnimatorController = overrideController;
         }
 
-        // Calculate screen bounds
         Camera cam = Camera.main;
         if (cam == null) return;
 
@@ -195,9 +191,7 @@ public class GremWander : MonoBehaviour
         isClicked = false;
     }
 
-    /// <summary>
-    /// Called by GremDrag to pause wandering while dragging
-    /// </summary>
+   
     public void SetDragging(bool dragging)
     {
         isDragging = dragging;
